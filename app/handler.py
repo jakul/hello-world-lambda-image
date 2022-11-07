@@ -1,2 +1,2 @@
 def lambda_handler(event, context):
-    return {"message": "Hola mundo!"}
+    return {"message": "Hello World && Hola mundo!"}
