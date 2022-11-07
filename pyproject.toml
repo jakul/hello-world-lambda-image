@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "hello-world-lambda-image"
+version = "0.1.0"
+description = ""
+authors = ["Craig Blaszczyk <masterjakul@gmail.com>"]
+readme = "README.md"
+packages = [{include = "app"}]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+
+[tool.poetry.group.dev.dependencies]
+black = "^22.10.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
