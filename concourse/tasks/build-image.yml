@@ -1,0 +1,24 @@
+---
+platform: linux
+
+image_resource:
+  type: registry-image
+  source:
+    repository: concourse/oci-build-task
+    tag: master
+
+inputs:
+  - name: context
+    path: .
+
+outputs:
+  - name: image
+
+caches:
+  - path: cache
+
+params:
+  DOCKERFILE: app/Dockerfile
+
+run:
+  path: build
