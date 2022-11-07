@@ -6,6 +6,10 @@ image_resource:
   source:
     repository: busybox
 
+inputs:
+  - name: repo
+    path: .
+
 outputs:
   - name: version
 
@@ -13,5 +17,5 @@ run:
   path: sh
   args:
     - -exc
-    - |
-      echo "latest" > version/version
+    - |-
+      cp .git/short_ref version/version
